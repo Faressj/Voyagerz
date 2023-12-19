@@ -1,0 +1,446 @@
+@font-face {
+  font-family: "nexabook";
+  src: url("../../../public/assets/nexabook/nexa-book.ttf");
+}
+
+body {
+  font-weight: 600;
+  min-height: 100vh;
+  background: rgb(4, 2, 10);
+  background: linear-gradient(135deg, rgba(4, 2, 10, 1) 8%, rgba(19, 16, 46, 1) 69%, rgba(25, 21, 60, 1) 100%);
+}
+
+.accueil {
+  font-family: "nexabook";
+  font-size: 16px;
+
+  .container {
+    padding: 10px;
+
+    .navbar {
+      color: #fff;
+
+      .firstbarre {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1000;
+        background-color: black;
+        top: 0;
+        height: 100px;
+
+        .logo {
+          position: fixed;
+          left: 0;
+          margin: 20px;
+          background-image: url('../../../public/assets/logo.png');
+          height: 75px;
+          width: 75px;
+          background-size: contain;
+          border-radius: 50%;
+
+          @media screen and (max-width: 769px) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+
+        .bonjour {
+          font-size: 40px;
+          margin: 20px;
+          display: flex;
+          align-items: center;
+        }
+
+        .profile-button svg {
+          margin-right: 25px;
+          right: 0;
+          top: 10px;
+          cursor: pointer;
+          color: #555;
+          position: absolute;
+          height: auto;
+          width: 75px;
+
+          @media screen and (max-width: 769px) {
+            width: 50px;
+            padding-top: 1em;
+          }
+
+        }
+      }
+
+      .user-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin-top: 100px;
+
+        .secondbarre {
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+
+          .destination {
+            display: flex;
+            gap: 10px;
+            p{
+              width: 100%;
+            }
+
+          }
+
+          .date1 {
+            display: flex;
+            gap: 10px;
+            p{
+              width: 100%;
+            }
+            input{
+              width: 50%;
+            }
+          }
+
+          .date2 {
+            display: flex;
+            gap: 10px;
+            p{
+              width: 100%;
+            }
+            input{
+              width: 50%;
+            }
+          }
+
+          .currencydiv {
+            display: flex;
+            gap: 10px;
+            p{
+              width: 100%;
+            }
+            select{
+              width: 50%;
+            }
+          }
+
+          input[type="text"] {
+            width: 93%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            &::placeholder {
+              color: #999;
+            }
+          }
+
+
+          .suggestions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            border: 1px solid #ccc;
+            border-radius: 32px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.15);
+            margin-top: 12px;
+            padding: var(--big-search-panel_padding, 16px 32px);
+
+            .divaroundli {
+              display: flex;
+              align-items: center;
+              list-style: none;
+              cursor: pointer;
+              transition: all 0.3s ease-in-out;
+              padding: 10px;
+              cursor: pointer;
+              border-radius: 5px;
+
+
+              .divsvg {
+                padding: 7px;
+                border: grey solid;
+                border-radius: 8px;
+
+                svg {
+                  display: block;
+                  height: 27px;
+                  width: 22px;
+                  fill: currentcolor;
+                }
+              }
+            }
+
+            .divaroundli:hover {
+              background-color: #f7f7f7;
+            }
+
+            .divimgposition img {
+              transition: transform 0.3s ease-in-out;
+            }
+
+            .divaroundli:hover .divimgposition img {
+              transform: scale(1.1);
+            }
+
+            .divaroundli li {
+              transition: color 0.3s ease-in-out;
+            }
+
+            .divaroundli:hover li {
+              color: #333;
+            }
+
+            .divsvg {
+              display: none;
+            }
+
+            li {
+              padding: 10px;
+              cursor: pointer;
+
+              &:hover {
+                background-color: #ddd;
+              }
+            }
+          }
+
+          label {
+            .input-with-icon {
+              display: flex;
+              align-items: center;
+            }
+
+            .input-icon {
+              width: 20px;
+              margin-right: 10px;
+            }
+
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+          }
+
+          select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+          }
+
+          .barre-validatebutton {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+          }
+
+          .bonjour {
+            padding-bottom: 1em;
+            font-size: 1.2em;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+    }
+
+    .selected-city {
+      color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 20px;
+
+      .secours {
+        color: #fff;
+        list-style: none; // Supprimez les marqueurs par défaut de la liste
+
+        li:first-child::before,
+        li:nth-child(2)::before,
+        li:nth-child(3)::before {
+          content: ""; // Contenu vide pour le marqueur
+          background-size: contain; // Ajustez la taille de l'image au marqueur
+          width: 20px; // Largeur du marqueur
+          height: 20px; // Hauteur du marqueur
+          display: inline-block;
+          margin-right: 5px; // Espace entre le marqueur et le texte
+
+          // Appliquez un filtre pour rendre les images SVG en blanc
+          filter: brightness(0); // 0 brightness rend l'image blanche
+        }
+
+        li:first-child::before {
+          background-image: url('../../../public/assets/ambulance-svgrepo-com.svg');
+        }
+
+        li:nth-child(2)::before {
+          background-image: url('../../../public/assets/police-car-1-svgrepo-com.svg');
+        }
+
+        li:nth-child(3)::before {
+          background-image: url('../../../public/assets/fire-truck-svgrepo-com.svg');
+        }
+      }
+
+      .get-transport-button {
+        width: 80% !important;
+      }
+
+
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        width: 20%;
+
+        @media screen and (max-width: 769px) {
+          width: 90%;
+        }
+      }
+
+      select {
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 0.7em;
+      }
+
+      input[type="text"] {
+        width: 50%;
+        padding: 10px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 0.7em;
+
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .accueil {
+    font-size: 18px;
+
+    .container {
+      padding: 20px;
+
+      .navbar {
+        .user-info {
+          .secondbarre {
+            padding: 10px;
+            border-radius: 50px;
+            width: 100%;
+            align-items: center;
+
+            select {
+              padding: 0;
+            }
+
+            input[type="text"] {
+              width: auto;
+            }
+
+            .afterBonjour {
+              display: flex;
+              gap: 30px;
+              height: 75px;
+              padding: 10px;
+              border-radius: 50px;
+              align-items: center;
+
+              .destination {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 0;
+                position: relative;
+
+                .inputandsuggestion {
+                  .suggestions {
+                    color: black;
+                    height: 300px;
+                    overflow: hidden;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    border: 1px solid #ccc;
+                    width: 100%;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 10;
+
+                    .divaroundli:hover {
+                      background-color: #eee;
+                    }
+                  }
+
+                }
+              }
+
+              .date1 {
+                display: flex;
+                gap: 10px;
+              }
+
+              .date2 {
+                display: flex;
+                gap: 10px;
+              }
+
+              .currencydiv {
+                display: flex;
+                gap: 10px;
+
+                .currencyselect {
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

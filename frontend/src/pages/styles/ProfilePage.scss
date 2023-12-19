@@ -1,0 +1,79 @@
+.profile-container {
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+    font-family: "nexabook";
+    h1 {
+        text-transform: uppercase;
+    }
+
+    .top-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn-return,
+        .btn-logout {
+            background-color: #eee;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+
+        .btn-return {
+            background-color: #f7f7f7;
+            color: #333;
+            border: 1px solid #ccc;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            img {
+                margin-right: 0.5rem;
+                fill: #333;
+                width: 16px;
+                height: 16px;
+            }
+
+            &:hover {
+                background-color: #e6e6e6;
+            }
+
+            &:active {
+                background-color: #d4d4d4;
+                transform: scale(0.97);
+            }
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 5px #719ECE;
+            }
+        }
+
+    }
+
+    .password-section {
+        margin-top: 2rem;
+
+        input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
